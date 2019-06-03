@@ -7,13 +7,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jzlc.service.IConsumerService;
 import com.jzlc.util.AjaxJson;
-import com.jzlc.util.CheckLogin;
 import com.jzlc.util.MD5;
 
 @Controller
 public class ConsumerController {
 	@Autowired
 	private IConsumerService consumerService;
+	
+	@RequestMapping("login")
+	public String login() {
+		return "login";
+	}
 	
 	@RequestMapping("personalLogin")
 	@ResponseBody
