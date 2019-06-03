@@ -13,7 +13,7 @@ import com.jzlc.util.MD5;
 public class ConsumerController {
 	@Autowired
 	private IConsumerService consumerService;
-
+	
 	@RequestMapping("login")
 	public String login() {
 		return "login";
@@ -34,4 +34,5 @@ public class ConsumerController {
 		}
 		return json;
 	}
+	
 }
