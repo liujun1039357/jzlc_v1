@@ -3,19 +3,15 @@ package com.jzlc.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 /**
  * 客户账户基础信息
  * */
 
-@Setter
-@Getter
-@ToString
+@Data
 public class Consumer implements Serializable{
 	/***/
 	public static Integer NORMAL= 0;
