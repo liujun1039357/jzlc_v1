@@ -9,6 +9,10 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * 客户账户基础信息
+ * */
+
 @Setter
 @Getter
 @ToString

@@ -9,24 +9,27 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 客户银行卡信息
+ * 收益流水
  * */
 
 @Setter
 @Getter
 @ToString
-public class BankcardInfo implements Serializable{
+public class Profit implements Serializable{
 	/***/
-	public static Integer Bound = 0;
 	private static final long serialVersionUID = 1L;
 
+	/**编号*/
+	private String no;
 	/**用户id*/
 	private String consumerId;
-	/**银行卡号*/
-	private String cardId;
-	/**修改时间*/
+	/**产品ID*/
+	private String productId;
+	/**结算日期*/
 	@DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
-	private Date updateTime;
-	/**0: 已绑定 1 已解绑 2 无效*/
-	private Integer cardStates = Bound;
+	private Date clearDate;
+	/**购买金额*/
+	private Integer principal;
+	/**收益*/
+	private Integer profit;
 }

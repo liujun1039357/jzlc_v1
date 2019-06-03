@@ -8,6 +8,10 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 客户详细信息
+ * */
+
 @Setter
 @Getter
 @ToString
