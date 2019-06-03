@@ -11,7 +11,7 @@ import java.util.Date;
 @Setter
 @Getter
 @ToString
-public class profit implements Serializable{
+public class Profit implements Serializable{
 	/***/
 	private static final long serialVersionUID = 1L;
 
