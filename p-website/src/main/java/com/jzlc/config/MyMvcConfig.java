@@ -1,4 +1,6 @@
-package java.lang;
+package com.jzlc.config;
+
+import java.lang.Override;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -11,8 +13,9 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		//super.addInterceptors(registry);
-		registry.addInterceptor(new CheckLoginInterceptor());
+		// super.addInterceptors(registry);
+		registry.addInterceptor(new CheckLoginInterceptor()).addPathPatterns("/**").excludePathPatterns("login.html",
+				"login", "/", "index.html");
 	}
-	
+
 }

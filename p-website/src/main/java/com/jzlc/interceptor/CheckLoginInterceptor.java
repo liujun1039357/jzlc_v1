@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.jzlc.util.CheckLogin;
 import com.jzlc.util.UserContext;
 
 /**
@@ -21,13 +20,10 @@ public class CheckLoginInterceptor extends HandlerInterceptorAdapter {
 			HttpServletResponse response, Object handler) throws Exception {
 		//判断handler使用时Controller中一个处理请求的方法
 		if(handler instanceof HandlerMethod){
-			//强转
-			HandlerMethod hm = (HandlerMethod)handler;
-			//获取处理请求方法上的注解
-			CheckLogin cl = hm.getMethodAnnotation(CheckLogin.class);
-			//如果有该注解,且用户信息为空,则拦截请求,重定向到登录页面
-			if(cl != null && UserContext.getLogininfo() == null){
-				response.sendRedirect("login");
+			//如果用户信息为空,则拦截请求,重定向到登录页面
+			if(UserContext.getLogininfo() == null){
+				request.setAttribute("msg", "请先登录!");
+				request.getRequestDispatcher("login.html").forward(request, response);
 				return false;
 			}
 		}
