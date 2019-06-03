@@ -1,16 +1,13 @@
 package com.jzlc.pojo;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-import org.springframework.format.annotation.DateTimeFormat;
-
+import lombok.Data;
 import java.io.Serializable;
-import java.util.Date;
 
-@Setter
-@Getter
-@ToString
+/**
+ * 客户详细信息
+ * */
+
+@Data
 public class ConsumerInfo implements Serializable{
 	/***/
 	public static Integer UNTESTED = 0;

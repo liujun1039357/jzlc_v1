@@ -1,16 +1,16 @@
 package com.jzlc.pojo;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
 
-@Setter
-@Getter
-@ToString
+/**
+ * 客户银行卡信息
+ * */
+
+@Data
 public class BankcardInfo implements Serializable{
 	/***/
 	public static Integer Bound = 0;

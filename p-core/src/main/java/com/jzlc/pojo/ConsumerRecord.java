@@ -1,16 +1,16 @@
 package com.jzlc.pojo;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
 
-@Setter
-@Getter
-@ToString
+/**
+ * 客户登录记录
+ * */
+
+@Data
 public class ConsumerRecord implements Serializable {
     /***/
     public static Integer SUCCESS= 0;
